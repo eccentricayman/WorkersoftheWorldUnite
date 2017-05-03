@@ -3,20 +3,17 @@ import string
 manifesto = open("manifesto.txt", "r")
 manifestoList = manifesto.read().translate(None, string.punctuation).split()
 
-def counter(count, toCount):
-    return count + 1
-
 def frequency(word):
     def hasWord(currentWord):
         return True if currentWord.lower() == word else False
     filterList = filter(hasWord, manifestoList)
-    return len(filterList)
+    return word + ": " + str(len(filterList)) + " appearances"
 
 def totalFrequency(words):
     def hasWords(currentWord):
         return True if currentWord.lower() in words else False
     filterList = filter(hasWords, manifestoList)
-    return len(filterList)
+    return str(words) + ": " + str(len(filterList)) + " appearances"
 
 def mostFrequency():
     dictionary = {}
