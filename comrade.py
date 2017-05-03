@@ -33,7 +33,7 @@ def mostFrequency():
 
 print frequency("bourgeoisie")
 print frequency("proletariat")
-
+print
 print totalFrequency(['bourgeoisie', 'proletariat'])
-
+print
 print mostFrequency()
